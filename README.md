@@ -41,6 +41,19 @@ csvファイル用レポジトリ追加(事前に準備しておく)
 git submodule add https://github.com/toyoake-contest/data.git csv
 ```
 
+個別のsubmoduleの更新
+
+```shell
+cd csv
+git add .
+git commit -m 'modified'
+git push
+cd ..
+git add .
+git commit -m 'modified submodule'
+git push --recurse-submodules=check
+```
+
 サイト設定
 
 ```shell
