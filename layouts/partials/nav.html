@@ -1,9 +1,9 @@
-<div class='nav-drop'>
-  <div class='nav-body'>
+<div class="nav-drop">
+  <div class="nav-body">
     {{- range .Site.Menus.main }}
-      <a href='{{ absURL .URL }}' class='nav_item'>{{ .Name }}</a>
+      <a href="{{ absURL .URL }}" class="nav_item">{{ .Name }}</a>
     {{- end }}
-    <div class='nav-close'></div>
+    <div class="nav-close"></div>
 <!--
     {{- partial "mode" . }}
 -->

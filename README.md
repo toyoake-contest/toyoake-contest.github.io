@@ -31,7 +31,7 @@ git submodule add https://github.com/onweru/newsroom.git themes/newsroom
 
 ```shell
 git submodule deinit -f themes/newsroom
-git rm -f themes/newsroom
+git rm themes/newsroom
 rm -fr .git/modules
 ```
 
@@ -40,6 +40,7 @@ csvファイル用レポジトリ追加(事前に準備しておく)
 ```shell
 git submodule add https://github.com/toyoake-contest/data.git csv
 git submodule update --remote
+git submodule update --init --recursive
 ```
 
 サイト設定
