@@ -7,9 +7,9 @@
 {{ if mod $i 2 | eq 1 }}<div class="grid-2 article_showcase">{{ end }}
 <article class="contest-item article mb-2">
   <h2>{{ index $row 1 }}</h2>
-  <h3>{{ index $row 5 }} {{ index $row 6 }}号</h3>
-  <h4>({{ index $row 8 }}{{ index $row 3 }})</h4>
-    <img src="{{ $.Site.BaseURL }}images/{{ $contest_dir}}/{{ index $row 4 }}.jpg" width="640" />
+  <h3>{{ index $row 4 }} {{ index $row 5 }}号</h3>
+  <h4>({{ index $row 7 }}{{ index $row 2 }})</h4>
+    <img src="{{ $.Site.BaseURL }}images/{{ $contest_dir}}/{{ index $row 3 }}.jpg" />
 </article>
 {{ if mod $i 2 | eq 0 }}</div>{{ end }}
 {{ end }}
