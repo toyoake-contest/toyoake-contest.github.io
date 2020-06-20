@@ -39,8 +39,6 @@ csvファイル用レポジトリ追加(事前に準備しておく)
 
 ```shell
 git submodule add https://github.com/toyoake-contest/data.git csv
-git submodule update --remote
-git submodule update --init --recursive
 ```
 
 サイト設定

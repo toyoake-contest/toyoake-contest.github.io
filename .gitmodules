@@ -3,5 +3,4 @@
 	url = https://github.com/onweru/newsroom.git
 [submodule "csv"]
 	path = csv
-	url = git@github.com:toyoake-contest/data.git
-	#url = https://github.com/toyoake-contest/data.git
+	url = https://github.com/toyoake-contest/data.git
