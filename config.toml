@@ -83,7 +83,7 @@ pygmentsOptions = "linenos=table"
 #  name = "タグ"
 #  weight = 2
 [[languages.ja.menu.main]]
-  url = "/schedule"
+  url = "/schedule/"
   name = "日程"
   weight = 3
 [[languages.ja.menu.main]]
