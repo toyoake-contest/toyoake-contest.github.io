@@ -1,6 +1,0 @@
-[submodule "themes/newsroom"]
-	path = themes/newsroom
-	url = https://github.com/onweru/newsroom.git
-[submodule "csv"]
-	path = csv
-	url = https://github.com/toyoake-contest/data.git
