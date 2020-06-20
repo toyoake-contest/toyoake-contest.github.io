@@ -1,4 +1,4 @@
-baseurl = "https://toyoake-contest.github.com/"  # Include trailing slash
+baseurl = "https://toyoake-contest.github.io/"  # Include trailing slash
 title = "Toyoake Kaki Flower Contest"
 theme = "newsroom"
 languageCode = "en-us"
