@@ -42,7 +42,6 @@ git submodule add https://github.com/toyoake-contest/data.git csv
 git submodule update --remote
 ```
 
-
 サイト設定
 
 ```shell
@@ -79,13 +78,13 @@ git branch -m src
 git push -u origin src
 ```
 
-Settings>Branches>Default branchでsrc->masterに変更
+Settings>Branches>Default branchでsrc->masterに変更(してもしなくてもよい)
 
 ## Github Actionsの利用
 
 * .github/workflows/gh-pages.yamlを作成
     * ソースはsrcブランチ
-    * 出力はpublicフォルダの内容をmasteブランチに
+    * 出力はpublicフォルダの内容をmasterxブランチに
 
 ```shell
 make deploy
