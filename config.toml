@@ -1,0 +1,92 @@
+baseurl = "https://toyoake-contest.github.com/"  # Include trailing slash
+title = "Toyoake Kaki Flower Contest"
+theme = "newsroom"
+languageCode = "en-us"
+defaultContentLanguage = "ja"
+author = "Toyoake Kaki"
+copyright = "Copyright © 2020, Toyoake Kaki Co., LTD.; all rights reserved."
+canonifyurls = true
+paginate = 5
+#relativeURLs = true
+# Enable syntax highlighting
+# comment or delete lines 11 ~ 14
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsUseClasses=true
+pygmentsOptions = "linenos=table"
+
+# Alternatively, you can use chroma instead of pigments
+# to do so comment or delete lines 11 ~ 14 and uncomment lines 17 ~ 27
+# [markup]
+#   [markup.highlight]
+#     codeFences = true
+#     guessSyntax = false
+#     hl_Lines = ""
+#     lineNoStart = 1
+#     lineNos = true
+#     lineNumbersInTable = true
+#     noClasses = false
+#     # style = "monokai"
+#     tabWidth = 2
+
+# If you want to use disqus, uncomment the line below
+# disqusShortname = "yourdiscussshortname"
+
+# ids used below are not valid. Replace with valid ones
+[params]
+  # ga_analytics = "" # google analytics ID e.g UA-116386578-1
+
+  # ga_verify = "" # google verification code e.g 5jb-rxeBfITeJQKOuUss3ud6FPGTxXkCho-ZN5qlrZg
+  twitter = "@toyoakekaki" # twitter handle e.g @weru
+  # blogDir = "blogFolderName" # uncomment and edit to exclude normal pages ... see issue #57
+  ## toyoake custom
+  csv_baseurl = "https://toyoake-contest.github.io/data/"
+  #columnNumber = 2
+  [[params.customCSS]]
+    href = "css/style.css"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+[blackfriday]
+  hrefTargetBlank = true
+
+[[menu.main]]
+  url = "/index.html"
+  name = "Home"
+  weight = 1
+#[[menu.main]]
+#  url = "/tags"
+#  name = "Tags"
+#  weight = 2
+[[menu.main]]
+  url = "/schedule/"
+  name = "Schedule"
+  weight = 3
+[[menu.main]]
+  url = "/about/"
+  name = "About"
+  weight = 4
+
+[languages.ja]
+  title = "愛知豊明花き市場品評会特設サイト"
+  dateFormat = "2006年1月2日"
+  copyright = "愛知豊明花き流通協同組合"
+  subtitle = "審査結果など情報満載"
+[[languages.ja.menu.main]]
+  url = "/index.html"
+  name = "ホーム"
+  weight = 1
+#[[languages.ja.menu.main]]
+#  url = "/tags"
+#  name = "タグ"
+#  weight = 2
+[[languages.ja.menu.main]]
+  url = "/schedule"
+  name = "日程"
+  weight = 3
+[[languages.ja.menu.main]]
+  url = "/about/"
+  name = "品評会について"
+  weight = 4

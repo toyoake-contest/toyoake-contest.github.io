@@ -1,0 +1,16 @@
+{{ $contest_id := string (default $.Page.Params.contest_id (.Get "contest_id")) }}
+{{ $contest_dir := string (default $contest_id $.Page.Params.contest_dir) }}
+{{ $csv := printf "%s/%s.csv" $.Site.Params.CSV_BaseURL $contest_id }}
+{{ $sep := "," }}
+{{ range $i, $row := getCSV $sep $csv }}
+{{ if gt $i 0}}
+{{ if mod $i 2 | eq 1 }}<div class="grid-2 article_showcase">{{ end }}
+<article class="contest-item article mb-2">
+  <h2>{{ index $row 1 }}</h2>
+  <h3>{{ index $row 5 }} {{ index $row 6 }}号</h3>
+  <h4>({{ index $row 8 }}{{ index $row 3 }})</h4>
+    <img src="{{ $.Site.BaseURL }}images/{{ $contest_dir}}/{{ index $row 4 }}.jpg" width="640" />
+</article>
+{{ if mod $i 2 | eq 0 }}</div>{{ end }}
+{{ end }}
+{{ end }}

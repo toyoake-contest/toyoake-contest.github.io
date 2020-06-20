@@ -1,0 +1,26 @@
+[toyoakekaki]
+  other = "豊明花き株式会社"
+[designed_by]
+  other = "制作 <a href='{{ .url }}' target='_blank'>{{ .name }}</a>"
+[share_story]
+  other = "シェアする"
+[link_copied]
+  other = "リンクをコピーしました"
+[author_profile]
+  other = "{{ . }}'のプロフィール"
+[copyright_by]
+  other = "Copyright by <a href='{{ .url }}' target='_blank'>{{ .name }}</a>"
+[404_title]
+  other = "申し訳ございません"
+[404_description]
+  other = "該当のページは存在しません"
+[go_back]
+  other = "戻る"
+[view_archive]
+  other = "過去の品評会"
+[go_to_top]
+   other = "トップページに戻る"
+[created_by]
+  other = 'Created by  <a href="{{ .url }}" target="_blank" title="Linkedin Profile" rel="nonopener">{{ .name }}</a>'
+[original_from]
+  other = 'Original from <a href="{{ .url }}" target="_blank" title="Linkedin Profile" rel="nonopener">{{ .name }}</a>'
