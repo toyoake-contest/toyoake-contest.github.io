@@ -172,3 +172,4 @@ vi content/contest/999.md
 ## Link
 
 * [Newsroom \| Hugo Themes](https://themes.gohugo.io/newsroom/)
+* [Git Submoduleについてまとめてみる \- Qiita](https://qiita.com/BlueSilverCat/items/19bb9b814572cd35b2ae)
