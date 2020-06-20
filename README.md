@@ -21,7 +21,7 @@ echo 'public' >> .gitignore
 echo 'resources' >> .gitignore
 ```
 
-テーマ設定
+テーマ設定(submoduleはhttpsプロトコルで追加)
 
 ```shell
 git submodule add https://github.com/onweru/newsroom.git themes/newsroom
@@ -35,13 +35,13 @@ git rm themes/newsroom
 rm -fr .git/modules
 ```
 
-csvファイル用レポジトリ追加(事前に準備しておく)
+csvファイル用レポジトリ追加(事前に準備しておく/submoduleはsshプロトコルで追加)
 
 ```shell
-git submodule add https://github.com/toyoake-contest/data.git csv
+git submodule add git@github.com:toyoake-contest/data.git
 ```
 
-個別のsubmoduleの更新
+csvのsubmoduleの更新
 
 ```shell
 cd csv
@@ -52,6 +52,17 @@ cd ..
 git add .
 git commit -m 'modified submodule'
 git push --recurse-submodules=check
+```
+
+(参考)submoduleの一括更新
+```shell
+# update submodule
+git submodule foreach git add .
+git submodule foreach git commit -m "2 on parent"
+git submodule foreach git push
+# update parent
+git add .
+git commit ...
 ```
 
 サイト設定
