@@ -5,20 +5,20 @@
   {{- $pages = .Site.RegularPages }}
   {{- with $filteredPosts }}
     {{- $pages = where $.Site.RegularPages "Section" . }}
+    {{- /*  $pages = where $.Site.RegularPages ".Params.type" "!=" "page" */}}
   {{- end }}
 {{- end }}
 <div class="wrap pt-2 mt-2">
   {{- $size := .Paginator.PageSize }}
   {{- $scratch := newScratch }}
-  {{- range $index, $value := (.Paginate $pages).Pages }}
-  {{ if ne .Params.type "page" }}
+  {{- range $index, $value := where (.Paginate $pages).Pages "Params.type" "!=" "page" }}
     {{ if isset .Params "image" }}
-        {{ $scratch.Set "image" .Params.image }}
-      {{ else }}
-        {{ $scratch.Set "image" "thumbnail.svg" }}
-      {{ end }}
-      {{ $image := $scratch.Get "image" }}
-      {{ $bg := (absURL (printf "images/%s" $image)) }}
+      {{ $scratch.Set "image" .Params.image }}
+    {{ else }}
+      {{ $scratch.Set "image" "thumbnail.svg" }}
+    {{ end }}
+    {{ $image := $scratch.Get "image" }}
+    {{ $bg := (absURL (printf "images/%s" $image)) }}
   <article class="article mb-2">
     <a href="{{ $value.Permalink }}" {{ if eq $index 0 }} class="grid-reverse" {{ end }}>
       <div class="article_thumb" style="background-image: url({{ $bg }})"></div>
@@ -31,13 +31,10 @@
       </div>
     </a>
   </article>
-    {{- if and (eq $index 0) (gt $size 1) }}<div class="grid-2 article_showcase">{{ end }}
-    {{- if and (eq $index (add $size -1)) (gt $size 1) }}</div>{{ end }}
-    {{- end }}
+  {{- if and (eq $index 0) (gt $size 1) }}<div class="grid-2 article_showcase">{{ end }}
+  {{- if and (eq $index (add $size -1)) (gt $size 1) }}</div>{{ end }}
   {{- end }}
 </div>
-<!--
-{{- template "_internal/pagination.html" . }}
--->
+{{- /* template "_internal/pagination.html" . */}}
 {{- partial "pager" . }}
 {{ end }}

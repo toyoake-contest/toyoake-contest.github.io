@@ -38,7 +38,7 @@ pygmentsOptions = "linenos=table"
 
   # ga_verify = "" # google verification code e.g 5jb-rxeBfITeJQKOuUss3ud6FPGTxXkCho-ZN5qlrZg
   twitter = "@toyoakekaki" # twitter handle e.g @weru
-  # blogDir = "blogFolderName" # uncomment and edit to exclude normal pages ... see issue #57
+  blogDir = "acontest" # uncomment and edit to exclude normal pages ... see issue #57
   ## toyoake custom
   csv_baseurl = "https://toyoake-contest.github.io/data/"
   #columnNumber = 2
@@ -88,5 +88,5 @@ pygmentsOptions = "linenos=table"
   weight = 3
 [[languages.ja.menu.main]]
   url = "/about/"
-  name = "品評会について"
+  name = "このサイトについて"
   weight = 4

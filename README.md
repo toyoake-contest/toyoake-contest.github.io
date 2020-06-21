@@ -170,6 +170,37 @@ content/contest/999.md created
 vi content/contest/999.md
 ```
 
+## 注意事項
+
+Javascriptでリンクの挙動を制御しているので適切なクラスを指定しないと別タブで開く
+
+assets/js/index.js
+
+```js
+  (function(){
+    let links = document.querySelectorAll('a');
+    if(links) {
+      Array.from(links).forEach(function(link){
+        let target, rel, blank, noopener, attr1, attr2, url, isExternal;
+        url = elemAttribute(link, 'href');
+        isExternal = (url && typeof url == 'string' && url.startsWith('http')) && !containsClass(link, 'nav_item') && !isChild(link, ['.archive', '.article', '.post_nav', '.pager']) ? true : false;
+        if(isExternal) {
+          target = 'target';
+          rel = 'rel';
+          blank = '_blank';
+          noopener = 'noopener';
+          attr1 = elemAttribute(link, target);
+          attr2 = elemAttribute(link, noopener);
+
+          attr1 ? false : elemAttribute(link, target, blank);
+          attr2 ? false : elemAttribute(link, rel, noopener);
+        }
+      });
+    }
+  })();
+```
+
+nav_itemクラスを指定するのがcssでの装飾が特にないので無難
 
 ## Link
 

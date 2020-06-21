@@ -24,3 +24,9 @@
   other = 'Created by  <a href="{{ .url }}" target="_blank" title="Linkedin Profile" rel="nonopener">{{ .name }}</a>'
 [original_from]
   other = 'Original from <a href="{{ .url }}" target="_blank" title="Linkedin Profile" rel="nonopener">{{ .name }}</a>'
+[no_older_posts]
+  other = "これ以上古い投稿はありません"
+[no_newer_posts]
+  other = "これ以上新しい投稿はありません"
+[copying_prohibited]
+  other = "当サイトのテキスト・画像の無断転載・複製を固く禁じます。"

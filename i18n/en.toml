@@ -20,3 +20,13 @@
   other = "View Archive"
 [go_to_top]
   other = "The Latest"
+[created_by]
+  other = 'Created by  <a href="{{ .url }}" target="_blank" title="Linkedin Profile" rel="nonopener">{{ .name }}</a>'
+[original_from]
+  other = 'Original from <a href="{{ .url }}" target="_blank" title="Linkedin Profile" rel="nonopener">{{ .name }}</a>'
+[no_older_posts]
+  other = "No older posts"
+[no_newer_posts]
+  other = "No newer posts"
+[copying_prohibited]
+  other = "Unauthorized copying and replication of the contents of this site, text and images are strictly prohibited."
