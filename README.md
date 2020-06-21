@@ -119,7 +119,9 @@ make deploy
 ## 既存のレポジトリからクローンする場合
 
 ```shell
-git clone git@github.com:toyoakekaki/toyoake-contest.github.io.git
+git clone -b src --recursive git@github.com:toyoake-contest/toyoake-contest.github.io.git
+# or
+git clone -b src git@github.com:toyoakekaki/toyoake-contest.github.io.git
 cd toyoake-contest.github.io
 git submodule update --init --recursive
 ```
