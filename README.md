@@ -35,42 +35,6 @@ git rm themes/newsroom
 rm -fr .git/modules
 ```
 
-csvファイル用レポジトリ追加(事前に準備しておく/submoduleはsshプロトコルで追加)
-
-```shell
-git submodule add git@github.com:toyoake-contest/data.git
-```
-
-csvのsubmoduleの更新
-
-```shell
-cd csv
-git add .
-git commit -m 'modified'
-git push
-cd ..
-git add .
-git commit -m 'modified submodule'
-git push --recurse-submodules=check
-```
-
-(参考)submoduleの一括更新
-```shell
-# update submodule
-git submodule foreach git add .
-git submodule foreach git commit -m "modified"
-git submodule foreach git push
-# update parent
-git add .
-git commit ...
-```
-
-Detached HEAD と出た場合
-
-```shell
-git submodule update --remote --merge
-```
-
 サイト設定
 
 ```shell
@@ -122,6 +86,24 @@ make deploy
 * Github>Settings>Gighub Pages>Source>gh-pages branchに設定する
 * しばらく時間がかかる
 
+
+### データ用のcsvレポジトリの準備
+
+submodule化すると以下のような問題がある
+
+* sshプロトコル接続だとGithub Actionsで認証エラーが出る
+* httpsプロトコル接続だとプッシュのたびにユーザ名などを聞いてくる
+* その他諸々の問題がある(Detached HEAD 他)
+* submodule化しているブランチはsrc-csv-submoduleを参照
+
+
+csvファイル用レポジトリ追加(事前に準備しておく/submoduleはsshプロトコルで追加)
+
+```shell
+git clone git@github.com:toyoake-contest/data.git csv
+echo 'csv' >> .gititnore
+```
+
 ## 既存のレポジトリからクローンする場合
 
 ```shell
@@ -130,6 +112,8 @@ git clone -b src --recursive git@github.com:toyoake-contest/toyoake-contest.gith
 git clone -b src git@github.com:toyoakekaki/toyoake-contest.github.io.git
 cd toyoake-contest.github.io
 git submodule update --init --recursive
+# add csv repository (not submodule)
+git clone git@github.com:toyoake-contest/data.git csv
 ```
 
 ## 使い方
