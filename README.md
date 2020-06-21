@@ -58,11 +58,17 @@ git push --recurse-submodules=check
 ```shell
 # update submodule
 git submodule foreach git add .
-git submodule foreach git commit -m "2 on parent"
+git submodule foreach git commit -m "modified"
 git submodule foreach git push
 # update parent
 git add .
 git commit ...
+```
+
+Detached HEAD と出た場合
+
+```shell
+git submodule update --remote --merge
 ```
 
 サイト設定
