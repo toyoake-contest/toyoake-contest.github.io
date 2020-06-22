@@ -1,6 +1,6 @@
 {{ $contest_id := string (default $.Page.Params.contest_id (.Get "contest_id")) }}
 {{ $contest_dir := string (default $contest_id $.Page.Params.contest_dir) }}
-{{ $csv := printf "%s/%s.csv" $.Site.Params.CSV_BaseURL $contest_id }}
+{{ $csv := printf "%s%s.csv" $.Site.Params.CSV_BaseURL $contest_id }}
 {{ $sep := "," }}
 {{ range $i, $row := getCSV $sep $csv }}
 {{ if gt $i 0}}
