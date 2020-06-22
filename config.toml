@@ -76,7 +76,7 @@ pygmentsOptions = "linenos=table"
   subtitle = "審査結果など情報満載"
 [[languages.ja.menu.main]]
   url = "/index.html"
-  name = "ホーム"
+  name = "品評会トップ"
   weight = 1
 #[[languages.ja.menu.main]]
 #  url = "/tags"
@@ -90,3 +90,7 @@ pygmentsOptions = "linenos=table"
   url = "/about/"
   name = "このサイトについて"
   weight = 4
+[[languages.ja.menu.main]]
+  url = "http://www.toyoake.or.jp/"
+  name = "豊明花き株式会社"
+  weight = 5
