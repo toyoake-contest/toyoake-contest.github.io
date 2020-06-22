@@ -1,8 +1,12 @@
 ---
 title: "{{ title }}"
 date: {{ .Date }}
-#draft: true
-#image: 
+draft: false
+image: spring.png
 contest_id: 0
 contest_dir: "000"
+tags: ["蘭", "ハウス鉢花", "東海", "苗物", "１・２年草"]
 ---
+審査結果です
+
+{{< contest >}}

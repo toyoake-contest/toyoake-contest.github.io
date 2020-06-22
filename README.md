@@ -150,14 +150,20 @@ python scripts/resize.py --input=work/contest/20200408_PPC春 --output=static/im
 新規投稿
 
 ```shell
-hugo new contest/999.md
-content/contest/999.md created
+hugo new contest/<品評会ID>.md
+content/contest/<品評会ID>.md created
 ```
 
 編集
 
 ```shell
-vi content/contest/999.md
+vi content/contest/<品評会ID>.md
+```
+
+日程の追加
+
+```shell
+vi content/schedule.md
 ```
 
 ## 注意事項
