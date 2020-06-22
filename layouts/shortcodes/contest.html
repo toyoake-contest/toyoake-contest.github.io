@@ -8,8 +8,8 @@
 <article class="contest-item article mb-2">
   <h2>{{ index $row 1 }}</h2>
   <h3>{{ index $row 4 }} {{ index $row 5 }}号</h3>
-  <h4>({{ index $row 2 }}&nbsp;{{ index $row 8 }})</h4>
-    <img src="{{ $.Site.BaseURL }}images/{{ $contest_dir}}/{{ index $row 4 }}.jpg" />
+  <h4>{{ index $row 2 }}&nbsp;({{ index $row 7 }})</h4>
+    <img src="{{ $.Site.BaseURL }}images/{{ $contest_dir}}/{{ index $row 3 }}.jpg" />
 </article>
 {{ if mod $i 2 | eq 0 }}</div>{{ end }}
 {{ end }}
