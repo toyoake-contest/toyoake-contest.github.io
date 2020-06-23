@@ -38,7 +38,6 @@ rm -fr .git/modules
 サイト設定
 
 ```shell
-cd ..
 cp -pr themes/newsroom/exampleSite/{content,data,config.toml} .
 ```
 
@@ -66,7 +65,7 @@ Githubレポジトリ作成後
 git remote add origin git@github.com:toyoakekaki/toyoake-contest.github.io.git
 git add .
 git commit -m 'init'
-# <ortanization>.github.ioの場合はmasterブランチが出力なのでソースはsrcブランチで管理
+# <ortanization>.github.ioの場合はmasterブランチが出力先になるのでソースはsrcブランチで管理するようリネーム
 git branch -m src
 git push -u origin src
 ```
@@ -77,15 +76,14 @@ Settings>Branches>Default branchでsrc->masterに変更(してもしなくても
 
 * .github/workflows/gh-pages.yamlを作成
     * ソースはsrcブランチ
-    * 出力はpublicフォルダの内容をmasterxブランチに
+    * 出力はpublicフォルダの出力をmasterブランチにプル
 
 ```shell
 make deploy
 ```
 
 * Github>Settings>Gighub Pages>Source>gh-pages branchに設定する
-* しばらく時間がかかる
-
+* 反映するまでしばらく時間がかかる
 
 ### データ用のcsvレポジトリの準備
 
@@ -96,8 +94,7 @@ submodule化すると以下のような問題がある
 * その他諸々の問題がある(Detached HEAD 他)
 * submodule化しているブランチはsrc-csv-submoduleを参照
 
-
-csvファイル用レポジトリ追加(事前に準備しておく/submoduleはsshプロトコルで追加)
+csvファイル用レポジトリ追加(事前に準備しておく(submoduleはsshプロトコルで追加)
 
 ```shell
 git clone git@github.com:toyoake-contest/data.git csv
