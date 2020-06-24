@@ -5,7 +5,7 @@
   {{- $pages = .Site.RegularPages }}
   {{- with $filteredPosts }}
     {{- $pages = where $.Site.RegularPages "Section" . }}
-    {{- /*  $pages = where $.Site.RegularPages ".Params.type" "!=" "page" */}}
+    {{- /* $pages = where $.Site.RegularPages ".Params.type" "!=" "page" */}}
   {{- end }}
 {{- end }}
 <div class="wrap pt-2 mt-2">
