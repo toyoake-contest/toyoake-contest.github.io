@@ -195,6 +195,20 @@ assets/js/index.js
 
 nav_itemクラスを指定するのがcssでの装飾が特にないので無難
 
+## 独自ドメインの設定
+
+`toyoake-contest.github.io`に`contest.toyoake.or.jp`を割り当てる場合
+
+github
+
+Settings>GitHub Pages>Custome Domain>contest.toyoake.or.jp
+
+bind
+
+```
+contest IN      CNAME   toyoake-contest.github.io.
+```
+
 ## Link
 
 * [Newsroom \| Hugo Themes](https://themes.gohugo.io/newsroom/)
