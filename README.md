@@ -117,7 +117,7 @@ git clone git@github.com:toyoake-contest/data.git csv
 
 ### 事前確認情報
 
-* 品評会ID: 対象の品評会のID({{< ref "content/schedule.md" >}}参照)
+* 品評会ID: 対象の品評会のID([schedule.md](content/schedule.md)参照)
 * 品評会ディレクトリ: 対象の品評会のID
     * ポットプランツの場合は品評会IDと同じ
         * 例) 224
@@ -140,13 +140,13 @@ git clone git@github.com:toyoake-contest/data.git csv
 python scripts/resize.py --input=<元画像フォルダ> --output=static/images/<品評会ディレクトリ>
 ```
 
-2017年ポットプランツコンテスト春の部の場合(品評会ID: 206)
+2017年ポットプランツコンテスト春の部の場合(品評会ID: 206)の場合
 
 ```shell
 python scripts/resize.py --input=work/contest/20170405_PPC --output=static/images/206
 ```
 
-東海鉢物品評会2017年観葉植物の部(品評会ID: 207)および鉢物品評会2017年観葉植物の部(品評会ID: 208)の場合(下記例では元画像が同一フォルダに存在する)
+東海鉢物品評会2017年観葉植物の部(品評会ID: 207)および鉢物品評会2017年観葉植物の部(品評会ID: 208)の場合(下記例では元画像が同一フォルダに存在する)の場合
 
 ```shell
 python scripts/resize.py --input=work/contest/20170405_観葉品評会_1 --output=static/images/207-208
@@ -161,13 +161,29 @@ hugo new contest/<品評会ID>.md
 content/contest/<品評会ID>.md created
 ```
 
+2017年ポットプランツコンテスト春の部の場合(品評会ID: 206)の場合
+
+
+```shell
+hugo new contest/206.md
+content/contest/206.md created
+```
+
 編集
 
 ```shell
 vi content/contest/<品評会ID>.md
 ```
 
-日程の追加
+2017年ポットプランツコンテスト春の部の場合(品評会ID: 206)
+
+
+```shell
+vi content/contest/206.md
+```
+
+
+日程の追加(以下のファイルを編集)
 
 ```shell
 vi content/schedule.md
@@ -218,6 +234,16 @@ bind
 ```
 contest IN      CNAME   toyoake-contest.github.io.
 ```
+
+Github pagesのルートにCNAMEというファイルが作成されるがレポジトリをプッシュした際にhugoのpublicディレクトリは再作成されるためCNAMEが消えてしまう
+
+そのためActionsを利用して生成する([src-master.yaml](.github/workflows/src-master.yaml)参照)
+
+```yaml
+- name: Build
+    run: hugo --minify && echo "contest.toyoake.or.jp" > public/CNAME
+```
+
 
 ## Link
 
