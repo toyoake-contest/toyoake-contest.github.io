@@ -117,7 +117,7 @@ git clone git@github.com:toyoake-contest/data.git csv
 
 ### 事前確認情報
 
-* 品評会ID: 対象の品評会のID(content/schedule.md参照)
+* 品評会ID: 対象の品評会のID({{< ref "content/schedule.md" >}}参照)
 * 品評会ディレクトリ: 対象の品評会のID
     * ポットプランツの場合は品評会IDと同じ
         * 例) 224
