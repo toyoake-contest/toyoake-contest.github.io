@@ -134,12 +134,22 @@ git clone git@github.com:toyoake-contest/data.git csv
 ### 画像の準備
 
 1. リサイズ前の画像ファイルをworkディレクトリ以下に準備
-2. 以下を実行 
-
-ポットプランツの場合
+2. 以下を実行(outputオプションで指定する品評会ディレクトリは自動生成される)
 
 ```shell
-python scripts/resize.py --input=work/contest/20200408_PPC春 --output=static/images/128
+python scripts/resize.py --input=<元画像フォルダ> --output=static/images/<品評会ディレクトリ>
+```
+
+2017年ポットプランツコンテスト春の部の場合(品評会ID: 206)
+
+```shell
+python scripts/resize.py --input=work/contest/20170405_PPC --output=static/images/206
+```
+
+東海鉢物品評会2017年観葉植物の部(品評会ID: 207)および鉢物品評会2017年観葉植物の部(品評会ID: 208)の場合(下記例では元画像が同一フォルダに存在する)
+
+```shell
+python scripts/resize.py --input=work/contest/20170405_観葉品評会_1 --output=static/images/207-208
 ```
 
 ### 投稿

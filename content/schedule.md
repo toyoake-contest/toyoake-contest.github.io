@@ -34,6 +34,9 @@ type: "page"
 | <a href='{{< relref "211.md" >}}' class='nav_item'>鉢物品評会2017年鉢花・蘭の部</a> | 2017年11月14日 - 2017年11月16日 |
 | <a href='{{< relref "210.md" >}}' class='nav_item'>東海鉢物品評会2017年鉢花・蘭の部</a> | 2017年11月14日 - 2017年11月16日 |
 | <a href='{{< relref "209.md" >}}' class="nav_item">2017年ポットプランツコンテスト秋の部</a> | 2017年1月14日 - 2017年11月16日 |
+| <a href='{{< relref "208.md" >}}' class='nav_item'>鉢物品評会2017年観葉植物の部</a> | 2017年4月4日 - 2017年4月6日 |
+| <a href='{{< relref "207.md" >}}' class='nav_item'>東海鉢物品評会2017年観葉植物の部</a> | 2017年4月4日 - 2017年4月6日 |
+| <a href='{{< relref "206.md" >}}' class="nav_item">2017年ポットプランツコンテスト春の部</a> | 2017年4月4日 - 2017年4月6日 |
 
 
 これより古い情報は[こちら](http://www.toyoake.or.jp/webapps/contest/)をご覧ください。
