@@ -55,22 +55,22 @@
   --ease: cubic-bezier(.19,1,.22,1);
 }
 
-:root[data-mode="dim"] {
+[data-mode="dim"]:root {
   --color-mode: 'dim';
   --bg: var(--dark);
   --text: var(--light);
   --accent: var(--bubble);
 }
 
-:root[data-mode="dim"] * {
+[data-mode="dim"]:root * {
   box-shadow: none !important;
 }
 
-:root[data-mode="dim"] .color_choice {
+[data-mode="dim"]:root .color_choice {
   mix-blend-mode: color-dodge;
 }
 
-:root[data-mode="dim"] .color_choice::after {
+[data-mode="dim"]:root .color_choice::after {
   background-image: url(/images/night-moon.jpg);
   transform: translateX(1.4rem);
 }
